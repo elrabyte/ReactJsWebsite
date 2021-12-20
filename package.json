@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "react-redux": "^7.2.6"
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36"
   }
 }
