@@ -1,6 +1,5 @@
 import Overview from "../../../comps/Overview";
-import { executeQuery } from "../../../lib/db";
-// import getFrequencies from "../api/test1/getFrequencies"
+import getFrequencies from "../../api/test1/frequency/getFrequencies"
 
 function Frequency ({frequencies}) {
     return (
@@ -16,11 +15,10 @@ function Frequency ({frequencies}) {
     )
 }
 
-
-export async function getStaticProps() {
-    
-    const res = await executeQuery({query:'SELECT * FROM test1.frequency;'});
+export async function getStaticProps() {    
+    const res = await getFrequencies();
     const data = await JSON.parse(JSON.stringify(res));
+    
     return {
         props: {
             frequencies: data,

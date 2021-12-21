@@ -1,9 +1,9 @@
 import { executeQuery } from "../../../lib/db";
-import Link from "next/link";
+import getFrequencies from "../../api/test1/frequency/getFrequencies";
 import Details from "../../../comps/Details";
 
 export const getStaticPaths = async () => {
-    const res = await executeQuery({query:'SELECT * FROM test1.frequency;'});
+    const res = await getFrequencies();
     const data = await JSON.parse(JSON.stringify(res));
 
     const paths = data.map(freq => {
