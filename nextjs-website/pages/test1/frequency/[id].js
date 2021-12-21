@@ -1,5 +1,6 @@
 import { executeQuery } from "../../../lib/db";
 import Link from "next/link";
+import Details from "../../../comps/Details";
 
 export const getStaticPaths = async () => {
     const res = await executeQuery({query:'SELECT * FROM test1.frequency;'});
@@ -27,17 +28,10 @@ export const getStaticProps = async (context) => {
     }
 }
 
-const Details = ({frequency}) => { 
+const DetailsPage = ({frequency}) => { 
     return (
-        <main>
-            <section class="text-center container">
-                <div class="row">
-                    <div class="mx-auto">
-                        <h1 class="fw-light">{frequency.description}</h1>
-                        <p class="lead text-muted">Details / <Link href={"./"}><a>Return to Overview</a></Link></p>
-                    </div>
-                </div>
-            </section>
+        <>
+        <Details title={frequency.description}/>
             <section>
                 <div class="form-group row">
                     <label for="staticEmail" class="col-lg-4 col-form-label">Expression</label>
@@ -46,8 +40,8 @@ const Details = ({frequency}) => {
                     </div>
                 </div>
             </section>
-        </main>
+        </>
     );
 }
 
-export default Details;
+export default DetailsPage;
