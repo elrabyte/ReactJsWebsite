@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
-    <footer class="fixed-bottom bg-light">
+    <footer className={"fixed-bottom bg-light"}>
       <p>
-        <i class="fas fa-arrow-circle-up"></i>&nbsp;
+        <i className={"fas fa-arrow-circle-up"}></i>&nbsp;
       </p>
     </footer>
   );

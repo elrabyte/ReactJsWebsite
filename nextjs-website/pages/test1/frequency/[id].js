@@ -1,6 +1,6 @@
-import { executeQuery } from "../../../lib/db";
-import getFrequencies from "../../api/test1/frequency/getFrequencies";
+import getFrequencies from "../../../lib/test1/frequency/getFrequencies";
 import Details from "../../../comps/Details";
+import getFrequency from "../../../lib/test1/frequency/getFrequency";
 
 export const getStaticPaths = async () => {
   const res = await getFrequencies();
@@ -20,9 +20,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const id = context.params.id;
-  const res = await executeQuery({
-    query: "SELECT * FROM test1.frequency where idFrequency = " + id,
-  });
+  const res = await getFrequency(id);
   const data = await JSON.parse(JSON.stringify(res[0]));
 
   return {
@@ -35,11 +33,11 @@ const DetailsPage = ({ frequency }) => {
     <>
       <Details title={frequency.description} />
       <section>
-        <div class="form-group row">
-          <label for="staticEmail" class="col-lg-4 col-form-label">
+        <div className={"form-group row"}>
+          <label htmlFor={"staticEmail"} className={"col-lg-4 col-form-label"}>
             Expression
           </label>
-          <div class="col-lg-8">
+          <div className={"col-lg-8"}>
             <p>{frequency.expression}</p>
           </div>
         </div>

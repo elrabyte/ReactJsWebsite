@@ -13,11 +13,11 @@ const NotFound = () => {
 
   return (
     <main>
-      <section class="text-center container">
-        <div class="row">
-          <div class="mx-auto">
-            <h1 class="fw-light">You fucked up</h1>
-            <p class="lead text-muted">this page doesn't exist</p>
+      <section className={"text-center container"}>
+        <div className={"row"}>
+          <div className={"mx-auto"}>
+            <h1 className={"fw-light"}>You fucked up</h1>
+            <p className={"lead text-muted"}>this page doesn't exist</p>
             <p>
               you will be redirected back to the <Link href="/">homepage</Link>.
             </p>

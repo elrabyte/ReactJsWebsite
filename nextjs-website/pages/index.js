@@ -1,15 +1,14 @@
-import Head from "next/head";
-import Image from "next/image";
-import Header from "../comps/header";
-import Footer from "../comps/Footer";
-import Home from "./home";
-
-import { useRouter } from "next/router";
-
-export default function HomePage() {
+export default function Home() {
   return (
-    <div>
-      <Home />
-    </div>
+    <main>
+      <section className={"text-center container"}>
+        <div className={"row"}>
+          <div className={"mx-auto"}>
+            <h1 className={"fw-light"}>Hello</h1>
+            <p className={"lead text-muted"}>Thats the start of something.</p>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }

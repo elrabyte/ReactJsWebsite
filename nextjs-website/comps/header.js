@@ -1,14 +1,16 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Header = () => {
+  const router = useRouter();
   return (
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
+    <nav className={"navbar navbar-expand-lg navbar-light bg-light"}>
+      <div className={"container-fluid"}>
         <Link href="/">
-          <a class="navbar-brand">Home</a>
+          <a className={"navbar-brand"}>Home</a>
         </Link>
         <button
-          class="navbar-toggler"
+          className={"navbar-toggler"}
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNavAltMarkup"
@@ -16,12 +18,20 @@ const Header = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className={"navbar-toggler-icon"}></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <Link href="/test1">
-              <a class="nav-link">Test1</a>
+        <div className={"collapse navbar-collapse"} id="navbarNavAltMarkup">
+          <div className={"navbar-nav"}>
+            <a className={"nav-item nav-link disabled"}>Test1</a>
+            <Link href={"/test1/frequency"}>
+              <a
+                className={
+                  "nav-item nav-link" +
+                  (router.pathname == "/test1/frequency" ? " active" : "")
+                }
+              >
+                Frequency
+              </a>
             </Link>
           </div>
         </div>

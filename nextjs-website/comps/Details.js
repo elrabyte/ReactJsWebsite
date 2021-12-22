@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Details = ({
   title,
@@ -7,11 +8,11 @@ const Details = ({
   returnLinkDescription = "Return to Overview",
 }) => {
   return (
-    <section class="text-center container">
-      <div class="row">
-        <div class="mx-auto">
-          <h1 class="fw-light">{title}</h1>
-          <p class="lead text-muted">
+    <section className={"text-center container"}>
+      <div className={"row"}>
+        <div className={"mx-auto"}>
+          <h1 className={"fw-light"}>{title}</h1>
+          <p className={"lead text-muted"}>
             {subTitle} /{" "}
             <Link href={returnLink}>
               <a>{returnLinkDescription}</a>
