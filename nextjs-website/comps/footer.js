@@ -1,9 +1,11 @@
 const Footer = () => {
-  return (    
+  return (
     <footer class="fixed-bottom bg-light">
-      <p><i class="fas fa-arrow-circle-up"></i>&nbsp;</p>
+      <p>
+        <i class="fas fa-arrow-circle-up"></i>&nbsp;
+      </p>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
