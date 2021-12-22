@@ -33,6 +33,16 @@ const Header = () => {
                 Frequency
               </a>
             </Link>
+            <Link href={"/test1/moneyManagement"}>
+              <a
+                className={
+                  "nav-item nav-link" +
+                  (router.pathname == "/test1/moneyManagement" ? " active" : "")
+                }
+              >
+                MoneyManagement
+              </a>
+            </Link>
           </div>
         </div>
       </div>

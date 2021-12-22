@@ -1,5 +1,5 @@
 import getFrequencies from "../../../lib/test1/frequency/getFrequencies";
-import Details from "../../../comps/Details";
+import Details from "../../../components/Details";
 import getFrequency from "../../../lib/test1/frequency/getFrequency";
 
 export const getStaticPaths = async () => {

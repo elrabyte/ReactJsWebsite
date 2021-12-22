@@ -1,4 +1,4 @@
-import Overview from "../../../comps/Overview";
+import Overview from "../../../components/Overview";
 import getFrequencies from "../../../lib/test1/frequency/getFrequencies";
 
 function Frequency({ frequencies }) {

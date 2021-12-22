@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "../styles/fontawesome/all.min.js";
 
 import { useEffect } from "react";
-import Layout from "../comps/layout";
+import Layout from "../components/layout";
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
